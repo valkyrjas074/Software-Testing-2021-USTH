@@ -1,4 +1,4 @@
-# Ex1-4 #
+# Excercise 1.4 #
 
 ## a) Write a Java method with the signature
 ```Java
