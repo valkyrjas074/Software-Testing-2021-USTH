@@ -1,17 +1,17 @@
-import java.util.*;
+import java.util.Vector;
 import java.lang.*;
 
 
 public class Excercise {
-    public static Vector union (Vector a, Vector b) {
-        Vector result = new Vector (a); // get all of a’s elements
-        for (Object obj : b) {
+    public static Vector<Integer> union (Vector<Integer> a, Vector<Integer> b) {
+        for (Integer obj : b) {
             if (!a.contains(obj)) {
-                result.add(obj);
+                a.add(obj);
             }
         }
-        return result;
+        return a;
     }
+
     public static int finLast(int[] x, int y)
     {
         for (int i = x.length - 1;i>=0;i--)
@@ -73,5 +73,17 @@ public class Excercise {
 
         int[] oddOrPos = {-3,-2,0,1,4};
         System.out.println("oddOrPos method result :"+oddOrPos(oddOrPos));
+
+        int n = 6;
+        int m = 8;
+        Vector<Integer> b = new Vector<>(n);
+        for (int i = 1; i <= n; i++) {
+            b.add(i);
+        }
+        Vector<Integer> c = new Vector<>();
+        for (int i = 1; i <= m; i++) {
+            c.add(i);
+        }
+        System.out.println(union(b,c));
     }
 }
